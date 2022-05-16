@@ -1,0 +1,43 @@
+https://api.bilibili.com/x/web-interface/archive/stat?aid=838544467
+
+视频xhr中heartbeat,其中包含cid和aid--->弹幕
+xhr中有stat?aid=xxxxx    api
+
+动态爬取视频列表
+https://api.bilibili.com/x/space/arc/search?mid=2019740&ps=30&tid=0&pn=2&keyword=&order=pubdate&jsonp=jsonp--->逆风笑
+https://api.bilibili.com/x/space/arc/search?mid=420249427&ps=30&tid=0&pn=1&keyword=&order=pubdate&jsonp=jsonp--->Ruki
+mid即up主id
+pn是当前页码
+
+
+
+https://api.bilibili.com/x/relation/stat?vmid=420249427--->爬取up主信息
+
+
+https://api.bilibili.com/x/space/acc/info?mid=420249427&jsonp=jsonp--->up主信息
+
+
+https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?&host_uid=420249427&offset_dynamic_id=0&need_top=1--->动态
+https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?&host_uid=420249427&offset_dynamic_id=400179364445412568&need_top=1
+https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?&host_uid=420249427&offset_dynamic_id=399081708247917876&need_top=1
+https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?&host_uid=420249427&offset_dynamic_id=397977184387191035&need_top=1
+
+data->cards->0:->card->attr(description)
+data->next_offset: 400179364445412540 决定了下一个页面
+
+data->字典
+cards->列表
+0->字典
+card->str
+
+item{'id': 77379355, 'title': '', 'description': '好喜欢晚安歌～💤\n晚安了亲爱的自己🎵\n明天起床绮倒计时5天！⌛\n点名贴↓↓↓', 'category': 'daily', 'role': [], 'source': [], 'pictures': [{'img_src': 'https://i0.hdslb.com/bfs/album/4e6f735a492c10ed7867d1306fda761196987255.png', 'img_width': 779, 'img_height': 708, 'img_size': 628}], 'pictures_count': 1, 'upload_time': 1591970956, 'at_control': '', 'reply': 173, 'settings': {'copy_forbidden': 0}, 'is_fav': 0}
+user{'uid': 420249427, 'head_url': 'https://i1.hdslb.com/bfs/face/cb927352d3ad86d2a29a0cf0fb4918bd1ccc3f0b.jpg', 'name': '琉绮Ruki', 'vip': {'vipType': 2, 'vipDueDate': 1619712000000, 'dueRemark': '', 'accessStatus': 0, 'vipStatus': 1, 'vipStatusWarn': '', 'themeType': 0, 'label': {'path': ''}}}
+
+
+ \"origin\": \"
+ {\\\"item\\\":{\\\"id\\\":77388590,\\\"title\\\":\\\"\\\",\\\"description\\\":\\\"@\\\\u7409\\\\u7eeeRuki \\\\n\\\\u63cf\\\\u753b\\\\u4e86\\\\u4e00\\\\u4e2aHelltaker\\\\u98ce\\\\u683c\\\\u7684ruki\\\\uff0c\\\\u5e0c\\\\u671b\\\\u7239\\\\u80fd\\\\u559c\\\\u6b22\\\\uff01(\\\\uff40\\\\u30fb\\\\u03c9\\\\u30fb\\\\u00b4)~\\\",\\\"category\\\":\\\"daily\\\",\\\"role\\\":[],\\\"source\\\":[],\\\"pictures\\\":[{\\\"img_src\\\":\\\"https:\\\\\\/\\\\\\/i0.hdslb.com\\\\\\/bfs\\\\\\/album\\\\\\/5b62fc918da11bc4fb93afd237dc4d2ac39bd7b1.png\\\",\\\"img_width\\\":2480,\\\"img_height\\\":2976,\\\"img_size\\\":2889},{\\\"img_src\\\":\\\"https:\\\\\\/\\\\\\/i0.hdslb.com\\\\\\/bfs\\\\\\/album\\\\\\/db2d9b0181219872dfbf471a5be98a2d7d4043f6.png\\\",\\\"img_width\\\":1920,\\\"img_height\\\":1080,\\\"img_size\\\":484}],\\\"pictures_count\\\":2,\\\"upload_time\\\":1591974442,\\\"at_control\\\":\\\"[{\\\\\\\"location\\\\\\\":0,\\\\\\\"type\\\\\\\":1,\\\\\\\"length\\\\\\\":8,\\\\\\\"data\\\\\\\":\\\\\\\"420249427\\\\\\\"}]\\\",\\\"reply\\\":5,\\\"settings\\\":{\\\"copy_forbidden\\\":0},\\\"is_fav\\\":0},\\\"user\\\":{\\\"uid\\\":464211,\\\"head_url\\\":\\\"https:\\\\\\/\\\\\\/i1.hdslb.com\\\\\\/bfs\\\\\\/face\\\\\\/2636e1363f254e118626ed003bcb041a2ff8156a.jpg\\\",\\\"name\\\":\\\"\\\\u58a8\\\\u5ba2\\\\u6728\\\",\\\"vip\\\":{\\\"vipType\\\":2,\\\"vipDueDate\\\":1619798400000,\\\"dueRemark\\\":\\\"\\\",\\\"accessStatus\\\":0,\\\"vipStatus\\\":1,\\\"vipStatusWarn\\\":\\\"\\\",\\\"themeType\\\":0,\\\"label\\\":{\\\"path\\\":\\\"\\\"}}}}\",
+
+{"item":
+    {"id":77388590
+    "title":"
+    ","description":"@\u7409\u7eeeRuki \n\u63cf\u753b\u4e86\u4e00\u4e2aHelltaker\u98ce\u683c\u7684ruki\uff0c\u5e0c\u671b\u7239\u80fd\u559c\u6b22\uff01(\uff40\u30fb\u03c9\u30fb\u00b4)~","category":"daily","role":[],"source":[],"pictures":[{"img_src":"https:\/\/i0.hdslb.com\/bfs\/album\/5b62fc918da11bc4fb93afd237dc4d2ac39bd7b1.png","img_width":2480,"img_height":2976,"img_size":2889},{"img_src":"https:\/\/i0.hdslb.com\/bfs\/album\/db2d9b0181219872dfbf471a5be98a2d7d4043f6.png","img_width":1920,"img_height":1080,"img_size":484}],"pictures_count":2,"upload_time":1591974442,"at_control":"[{\"location\":0,\"type\":1,\"length\":8,\"data\":\"420249427\"}]","reply":5,"settings":{"copy_forbidden":0},"is_fav":0},"user":{"uid":464211,"head_url":"https:\/\/i1.hdslb.com\/bfs\/face\/2636e1363f254e118626ed003bcb041a2ff8156a.jpg","name":"\u58a8\u5ba2\u6728","vip":{"vipType":2,"vipDueDate":1619798400000,"dueRemark":"","accessStatus":0,"vipStatus":1,"vipStatusWarn":"","themeType":0,"label":{"path":""}}}}

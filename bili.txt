@@ -1,0 +1,31 @@
+"""
+动态爬取
+user{'uid': 420249427, 'uname': '琉绮Ruki', 'face': 'https://i1.hdslb.com/bfs/face/cb927352d3ad86d2a29a0cf0fb4918bd1ccc3f0b.jpg'}
+item{'rp_id': 400018135664677542, 'uid': 420249427, 'content': '哇喜欢！！！！！！太棒了来阴间吧来阴间～～～～～', 'ctrl': '', 'orig_dy_id': 400016254472031275, 'pre_dy_id': 400016254472031275, 'timestamp': 1591974880, 'reply': 36, 'orig_type': 2}
+origin{"item":{"id":77388590,"title":"","description":"@\u7409\u7eeeRuki \n\u63cf\u753b\u4e86\u4e00\u4e2aHelltaker\u98ce\u683c\u7684ruki\uff0c\u5e0c\u671b\u7239\u80fd\u559c\u6b22\uff01(\uff40\u30fb\u03c9\u30fb\u00b4)~","category":"daily","role":[],"source":[],"pictures":[{"img_src":"https:\/\/i0.hdslb.com\/bfs\/album\/5b62fc918da11bc4fb93afd237dc4d2ac39bd7b1.png","img_width":2480,"img_height":2976,"img_size":2889},{"img_src":"https:\/\/i0.hdslb.com\/bfs\/album\/db2d9b0181219872dfbf471a5be98a2d7d4043f6.png","img_width":1920,"img_height":1080,"img_size":484}],"pictures_count":2,"upload_time":1591974442,"at_control":"[{"location":0,"type":1,"length":8,"data":"420249427"}]","reply":5,"settings":{"copy_forbidden":0},"is_fav":0},"user":{"uid":464211,"head_url":"https:\/\/i1.hdslb.com\/bfs\/face\/2636e1363f254e118626ed003bcb041a2ff8156a.jpg","name":"\u58a8\u5ba2\u6728","vip":{"vipType":2,"vipDueDate":1619798400000,"dueRemark":"","accessStatus":0,"vipStatus":1,"vipStatusWarn":"","themeType":0,"label":{"path":""}}}}
+origin_extend_json{"ctrl":[{"data":"420249427","length":8,"location":0,"type":1}],"from":{"emoji_type":1,"from":"create.dynamic.web"},"like_icon":{"action":"","action_url":"","end":"","end_url":"","start":"","start_url":""}}
+origin_user{'info': {'uid': 464211, 'uname': '墨客木', 'face': 'https://i1.hdslb.com/bfs/face/2636e1363f254e118626ed003bcb041a2ff8156a.jpg'}, 'card': {'official_verify': {'type': -1, 'desc': ''}}, 'vip': {'vipType': 2, 'vipDueDate': 1619798400000, 'dueRemark': '', 'accessStatus': 0, 'vipStatus': 1, 'vipStatusWarn': '', 'themeType': 0, 'label': {'path': ''}}, 'pendant': {'pid': 217, 'name': 'citrus', 'image': 'https://i0.hdslb.com/bfs/face/f2d3a85b611eb2ef13cb64415187e3e9fd487ec8.png', 'expire': 0, 'image_enhance': 'https://i0.hdslb.com/bfs/face/f2d3a85b611eb2ef13cb64415187e3e9fd487ec8.png'}, 'rank': '10000', 'sign': 'V相关，但什么都发，P站同名，喜欢可以点个关注哦~私信可约', 'level_info': {'current_level': 5, 'current_min': 0, 'current_exp': 0, 'next_exp': '0'}}
+
+字典
+user--->动态发表用户信息
+    uid(int)
+    uname(str)
+    face(str)
+item(内容为动态)->小视频(有user,item中无aid,或者tags为小视频,取item->description)->视频(无user,取title,判断方法,aid属性)
+    rp_id(int)
+    uid(int)
+    content(str)动态内容
+    ctrl(str)
+    orig_dy_id(int)
+    pre_dy_id(int)
+    timestamp(int)
+    reply(int)
+    orig_type(int)
+origin(转发的原动态或视频或专栏)
+    item(dict)--->回复的是动态||aid(int)回复的是视频
+origin_extend_json
+origin_user(转发的动态发表用户)
+"""
+
+card: "{"aid":413564879,"attribute":16512,"cid":202074621,"comment_jump_url":"bilibili:\/\/video\/413564879\/?page=1&player_preload=null&player_width=1920&player_height=1080&player_rotate=0","copyright":1,"ctime":1592148085,"desc":"★金鱼龙绮大军5群：1005397354\n金鱼龙绮大军6群：739568838\n★微博@琉绮Ruki\n★提问箱：http:\/\/www.popiask.cn\/ZrCGUz","dimension":{"height":1080,"rotate":0,"width":1920},"duration":5579,"dynamic":"谁先尴尬谁就输了！\n#VirtuaReal##琉绮Ruki##虚拟主播#","jump_url":"bilibili:\/\/video\/413564879\/?page=1&player_preload=null&player_width=1920&player_height=1080&player_rotate=0","owner":{"face":"https:\/\/i1.hdslb.com\/bfs\/face\/cb927352d3ad86d2a29a0cf0fb4918bd1ccc3f0b.jpg","mid":420249427,"name":"琉绮Ruki"},"pic":"https:\/\/i1.hdslb.com\/bfs\/archive\/3642ea8b06ae66bac1e2471979ac2d2f3126ff45.jpg","player_info":null,"pubdate":1592148085,"rights":{"autoplay":1,"bp":0,"download":0,"elec":0,"hd5":0,"is_cooperation":0,"movie":0,"no_background":0,"no_reprint":1,"pay":0,"ugc_pay":0,"ugc_pay_preview":0},"stat":{"aid":413564879,"coin":370,"danmaku":280,"dislike":0,"favorite":509,"his_rank":0,"like":1862,"now_rank":0,"reply":156,"share":80,"view":11240},"state":0,"tid":27,"title":"【Ruki】6\/14 这样撒娇的ru宝你爱了吗","tname":"综合","videos":1}"
+d
