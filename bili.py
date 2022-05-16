@@ -2,7 +2,7 @@
 import urllib3
 import requests
 import json
-# from dynamic import Dynamic
+from dynamic import Dynamic
 
 """
 req = requests.get(url)
